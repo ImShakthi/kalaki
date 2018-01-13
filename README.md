@@ -5,5 +5,5 @@ Kalaki is webapp with HTML, CSS, Javascript, Java Spring frameworks, hosted in h
 
 ## Demo
 
-You can find Kalaki for demo @ [kalaki@heroku](https://kalaki.herokuapp.com/).
+You can find Kalaki for demo at [kalaki@heroku](https://kalaki.herokuapp.com/).
 
