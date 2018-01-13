@@ -96,5 +96,4 @@ public class Main {
       model.put("science", "E=mc^2: 12 GeV = " + m.toString());
       return "hello";
   }
-
 }
