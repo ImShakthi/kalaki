@@ -82,3 +82,13 @@ input[type=button], input[type=submit], input[type=reset] {
 	text-align: center;
 	text-shadow: 0 1px 1px #fff;
 }
+
+#renderText{
+	color: #4e9a06;
+	font-family: Courier;
+	font-size: 20px;
+	line-height: 10px;
+	font-weight: bold;
+	padding: 10px 10px;
+}
+

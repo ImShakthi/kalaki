@@ -44,11 +44,11 @@ var BaseHandlerUtil = {
 
 	},
 
-	runSandbox : function() {
+	saveSandbox : function() {
 
 		BaseHandlerUtil.saveSandbox();
 	},
-	saveSandbox : function() {
+	runSandbox : function() {
 		try {
 
 			var html = document.getElementById('htmlText').value;

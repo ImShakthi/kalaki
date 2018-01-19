@@ -11,13 +11,33 @@
 <!-- 		<script src="scripts/WebConstants.js" rel="text/javascript"></script> -->
 
 <link href="stylesheets/styles.css" rel="stylesheet"></link>
+<script>
+	$(document).delegate('#textbox', 'keydown', function(e) {
+		var keyCode = e.keyCode || e.which;
+
+		if (keyCode == 9) {
+			e.preventDefault();
+			var start = $(this).get(0).selectionStart;
+			var end = $(this).get(0).selectionEnd;
+
+			// set textarea value to: text before caret + tab + text after caret
+			$(this).val($(this).val().substring(0, start)
+				+ "\t"
+				+ $(this).val().substring(end));
+
+			// put caret at right position again
+			$(this).get(0).selectionStart = $(this).get(0).selectionEnd = start + 1;
+		}
+	});
+</script>
 </head>
 <body>
 	<div id="main-div">
-		<span id="logo"> Kalaki</span> <input type="button" id="runSandbox"
-			value="Run" onclick="BaseHandlerUtil.runSandbox()" /> <input
-			type="button" id="saveSandbox" value="Save"
-			onclick="BaseHandlerUtil.saveSandbox()" />
+		<span id="logo">Kalaki</span>
+		<input type="button" id="runSandbox" value="Run"
+			onclick="BaseHandlerUtil.runSandbox()" /> 
+			<input type="button"
+			id="saveSandbox" value="About ME:)" onclick="alert('About ME:)');" />
 
 
 		<div class="row">
@@ -41,7 +61,7 @@
 				</div>
 			</div>
 			<div class="column">
-				Render
+				<div id="renderText"> Render</div>
 				<div id="renderDiv"></div>
 			</div>
 		</div>
